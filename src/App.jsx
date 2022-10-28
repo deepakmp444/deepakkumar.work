@@ -1,32 +1,60 @@
+import React from "react";
 import { lazy, Suspense } from "react";
 import Home from "./page/Home";
 import Navbar from "./components/Navbar";
 import Resume from "./components/Resume";
-import { Routes, Route } from "react-router-dom";
-
-const About = lazy(() => import("./page/About"));
-const Skill = lazy(() => import("./page/Skill"));
-const Experience = lazy(() => import("./page/Experience"));
-const Project = lazy(() => import("./page/Project"));
-const Education = lazy(() => import("./page/Education"));
-const Hobby = lazy(() => import("./page/Hobby"));
+import About from "./page/About";
+import Skill from "./page/Skill";
+import Experience from "./page/Experience";
+import Project from "./page/Project";
+import Education from "./page/Education";
+import Hobby from "./page/Hobby";
+import { useLocation, useRoutes } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
+  const element = useRoutes([
+    {
+      path: "/",
+      element: <Home />,
+    },
+    {
+      path: "/about",
+      element: <About />,
+    },
+    {
+      path: "/skill",
+      element: <Skill />,
+    },
+    {
+      path: "/experience",
+      element: <Experience />,
+    },
+    {
+      path: "/project",
+      element: <Project />,
+    },
+    {
+      path: "/education",
+      element: <Education />,
+    },
+    {
+      path: "/hobby",
+      element: <Hobby />,
+    },
+  ]);
+
+  const location = useLocation();
+
+  if (!element) return null;
+
   return (
     <div className="bg">
       <Resume />
       <main>
-        <Suspense fallback={<h1 className="text-white">Loading...</h1>}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/skill" element={<Skill />} />
-            <Route path="/experience" element={<Experience />} />
-            <Route path="/project" element={<Project />} />
-            <Route path="/education" element={<Education />} />
-            <Route path="/hobby" element={<Hobby />} />
-          </Routes>
-        </Suspense>
+        <AnimatePresence mode="wait">
+          {React.cloneElement(element, { key: location.pathname })}
+        </AnimatePresence>
       </main>
       <Navbar />
     </div>

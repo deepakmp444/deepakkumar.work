@@ -3,6 +3,18 @@ body {
   background-size: contain;
 }
 
+@media only screen and (max-width: 600px) {
+  .mobile-responsive {
+    display: none !important;
+  }
+}
+
+.heading-color {
+  color: #dddbdb !important;
+}
+.sub-heading-color {
+  color: #c9c7c7;
+}
 .btnc {
   height: 40px;
   width: 120px;
@@ -16,8 +28,9 @@ body {
   background: rgba(221, 219, 219, 0.2);
   border: 1px solid #dddbdb;
 }
+
 .btnwhite {
-  color: #fff !important;
+  color: #dddbdb !important;
 }
 
 .center {
@@ -26,40 +39,86 @@ body {
   align-items: center;
 }
 
-p {
-  font-family: "Inter", sans-serif;
+.addFont {
+  font-family: "Montserrat", sans-serif;
 }
 
+/* this is icon */
 .box {
   width: 250px;
   margin-left: auto;
   margin-right: auto;
 }
 
-h5:after {
-  display: block;
-  content: "";
-  border-bottom: solid 3px #019fb6;
-  transform: scaleX(0);
-  transition: transform 250ms ease-in-out;
-}
-
-h5:hover:after {
-  transform: scaleX(1);
-}
-h5.fromRight:after {
-  transform-origin: 100% 50%;
-}
-h5.fromLeft:after {
-  transform-origin: 0% 50%;
-}
 ::-moz-selection {
   /* Code for Firefox */
   color: black;
-  background: white;
+  background: #c9c7c7;
 }
 
 ::selection {
   color: black;
-  background: white;
+  background: #c9c7c7;
+}
+
+div a.active {
+  border-top: 1px solid #c9c7c7;
+}
+
+.link {
+  text-decoration: none;
+  color: #dddbdb !important;
+}
+.link:hover {
+  color: #dddbdb !important;
+}
+
+.cool-link {
+  display: inline-block;
+}
+
+.cool-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #dddbdb !important;
+  transition: width 0.3s;
+}
+
+.cool-link:hover::after {
+  width: 100%;
+  /* //transition: width .3s; */
+}
+
+.fontWeight100 {
+  font-weight: 100;
+}
+.fontWeight200 {
+  font-weight: 200;
+}
+.fontWeight300 {
+  font-weight: 300;
+}
+.fontWeight400 {
+  font-weight: 400;
+}
+.fontWeight500 {
+  font-weight: 500;
+}
+.fontWeight600 {
+  font-weight: 600;
+}
+.fontWeight700 {
+  font-weight: 700;
+}
+.fontWeight800 {
+  font-weight: 800;
+}
+.fontWeight900 {
+  font-weight: 900;
+}
+
+.mouse-pointer {
+  cursor: pointer;
 }
