@@ -10,7 +10,6 @@ function Skill() {
       className="text-white container"
     >
       <h5 className="heading-color addFont fontWeight600">Tech Stack</h5>
-      
     </motion.div>
   );
 }

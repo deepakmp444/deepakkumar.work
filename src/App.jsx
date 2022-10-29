@@ -11,6 +11,8 @@ import Education from "./page/Education";
 import Hobby from "./page/Hobby";
 import { useLocation, useRoutes } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
+import Sidebar from "./components/Sidebar";
+import MenuProvider from "./context/MenuContext";
 
 function App() {
   const element = useRoutes([
@@ -49,15 +51,20 @@ function App() {
   if (!element) return null;
 
   return (
-    <div className="bg">
-      <Resume />
-      <main>
-        <AnimatePresence mode="wait">
-          {React.cloneElement(element, { key: location.pathname })}
-        </AnimatePresence>
-      </main>
-      <Navbar />
-    </div>
+    <>
+      <MenuProvider>
+        <Sidebar />
+        <div className="bg">
+          <Resume />
+          <main>
+            <AnimatePresence mode="wait">
+              {React.cloneElement(element, { key: location.pathname })}
+            </AnimatePresence>
+          </main>
+          <Navbar />
+        </div>
+      </MenuProvider>
+    </>
   );
 }
 

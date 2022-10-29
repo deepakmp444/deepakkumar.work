@@ -3,8 +3,12 @@ import Deepak from "../assets/deepak.jpeg";
 import Linkedin from "../assets/linkedin.svg";
 import Github from "../assets/github.svg";
 import Twitter from "../assets/twitter.svg";
+import { SidebarContextApi } from "../context/MenuContext";
+import { useContext } from "react";
 
 function Home() {
+  const { isOpen } = useContext(SidebarContextApi);
+
   const openInNewTab = (url) => {
     window.open(url, "_blank", "noopener,noreferrer");
   };

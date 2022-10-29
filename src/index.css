@@ -8,6 +8,11 @@ body {
     display: none !important;
   }
 }
+@media only screen and (min-width: 600px) {
+  .desktop-responsive {
+    display: none !important;
+  }
+}
 
 .heading-color {
   color: #dddbdb !important;
@@ -15,6 +20,17 @@ body {
 .sub-heading-color {
   color: #c9c7c7;
 }
+
+.btnc-menu {
+  height: 40px;
+  width: 50px;
+  border: 1px solid #dddbdb;
+  border-radius: 10px;
+}
+.btnc-menu:hover {
+  background: rgba(221, 219, 219, 0.2);
+}
+
 .btnc {
   height: 40px;
   width: 120px;
@@ -121,4 +137,27 @@ div a.active {
 
 .mouse-pointer {
   cursor: pointer;
+}
+
+.borderCircle {
+  position: relative;
+  top: "100px";
+  border: 2px solid white;
+  border-radius: 20px;
+}
+
+.sidebarWidth {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  height: 100vh;
+  width: 200px;
+  background: black;
+  color: #dddbdb;
+}
+.bg-sidebar-text {
+  /* border-top: 1px solid white; */
+}
+.bg-sidebar-text:hover {
+  background: rgba(176, 172, 172, 0.2);
 }
