@@ -161,3 +161,10 @@ div a.active {
 .bg-sidebar-text:hover {
   background: rgba(176, 172, 172, 0.2);
 }
+
+
+.prevent-select {
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}

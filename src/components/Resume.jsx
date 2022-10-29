@@ -30,7 +30,7 @@ function Resume() {
 
         <div className="btnc" style={{ cursor: "pointer" }}>
           <p
-            className="btnwhite center addFont"
+            className="btnwhite center addFont prevent-select"
             style={{ marginTop: "5px", cursor: "pointer" }}
           >
             Resume
@@ -40,7 +40,7 @@ function Resume() {
       <div className="d-flex justify-content-end mobile-responsive">
         <div className="btnc" style={{ cursor: "pointer" }}>
           <p
-            className="btnwhite center addFont"
+            className="btnwhite center addFont prevent-select"
             style={{ marginTop: "5px", cursor: "pointer" }}
           >
             Resume
