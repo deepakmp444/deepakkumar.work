@@ -162,9 +162,31 @@ div a.active {
   background: rgba(176, 172, 172, 0.2);
 }
 
-
 .prevent-select {
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10 and IE 11 */
   user-select: none; /* Standard syntax */
+}
+
+.vl {
+  border-left: 2px solid #c9c7c7;
+  height: 150px;
+}
+
+/* li {
+  list-style: none;
+  font-size: 20px;
+}
+
+li:before {
+  content: "·";
+  font-size: 120px;
+  vertical-align: middle;
+  line-height: 20px;
+} */
+.pointCSS {
+  width: 16.42px;
+  height: 16.42px;
+  background: #dddbdb;
+  border-radius: 10px;
 }
