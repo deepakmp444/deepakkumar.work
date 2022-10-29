@@ -13,6 +13,7 @@ import { useLocation, useRoutes } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import Sidebar from "./components/Sidebar";
 import MenuProvider from "./context/MenuContext";
+import PageNotFound from "./page/PageNotFound";
 
 function App() {
   const element = useRoutes([
@@ -43,6 +44,10 @@ function App() {
     {
       path: "/hobby",
       element: <Hobby />,
+    },
+    {
+      path: "*",
+      element: <PageNotFound />,
     },
   ]);
 
