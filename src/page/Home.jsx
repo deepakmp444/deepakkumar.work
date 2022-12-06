@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import Deepak from "../assets/deepak.jpeg";
+// import Deepak from "../assets/deepak.jpeg";
+import Deepak from "../assets/DeepakWork.png";
 import Linkedin from "../assets/linkedin.svg";
 import Github from "../assets/github.svg";
 import Twitter from "../assets/twitter.svg";
@@ -27,7 +28,6 @@ function Home() {
           height="250px"
           style={{ marginTop: "70px" }}
         />
-
         <div
           className="text-center addFont mt-3 heading-color"
           style={{ fontWeight: "600", fontSize: "30px" }}
