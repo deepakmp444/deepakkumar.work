@@ -189,3 +189,10 @@ li:before {
   background: #dddbdb;
   border-radius: 10px;
 }
+
+.imgD:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 100px 0px rgba(236, 235, 233, 0.752);
+  -moz-box-shadow: 0px 0px 100px 0px rgba(236, 235, 233, 0.752);
+  box-shadow: 0px 0px 100px 0px rgba(236, 235, 233, 0.752);
+}

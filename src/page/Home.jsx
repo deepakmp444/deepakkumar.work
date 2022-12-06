@@ -24,7 +24,7 @@ function Home() {
       >
         <img
           src={Deepak}
-          className="rounded-circle mx-auto d-block"
+          className="rounded-circle mx-auto d-block imgD"
           height="250px"
           style={{ marginTop: "70px" }}
         />
